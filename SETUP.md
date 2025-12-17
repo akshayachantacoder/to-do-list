@@ -26,7 +26,7 @@ A modern task management application built with React/Next.js frontend and Pytho
 
 ## Project Structure
 
-\`\`\`
+```
 project/
 ├── frontend/
 │   ├── app/
@@ -62,7 +62,7 @@ project/
     ├── requirements.txt
     ├── .env
     └── run.sh
-\`\`\`
+```
 
 ## API Endpoints
 
@@ -162,48 +162,48 @@ project/
 ### Backend Setup
 
 1. Create a virtual environment:
-\`\`\`bash
+```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
-\`\`\`
+```
 
 2. Install dependencies:
-\`\`\`bash
+```bash
 cd backend
 pip install -r requirements.txt
-\`\`\`
+```
 
 3. Create `.env` file:
-\`\`\`
+```
 SECRET_KEY=your-secret-key-here
 DATABASE_URL=sqlite:///./taskmanager.db
-\`\`\`
+```
 
 4. Run the server:
-\`\`\`bash
+```bash
 python main.py
 # or
 uvicorn main:app --reload
-\`\`\`
+```
 
 The backend will be available at `http://localhost:8000`
 
 ### Frontend Setup
 
 1. Install dependencies:
-\`\`\`bash
+```bash
 npm install
-\`\`\`
+```
 
 2. Set environment variables in `.env.local`:
-\`\`\`
+```
 NEXT_PUBLIC_API_URL=http://localhost:8000
-\`\`\`
+```
 
 3. Run the development server:
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 
 The frontend will be available at `http://localhost:3000`
 
@@ -235,7 +235,7 @@ The frontend will be available at `http://localhost:3000`
 ## Running Both Frontend and Backend
 
 ### Option 1: Terminal Tabs
-\`\`\`bash
+```bash
 # Terminal 1: Backend
 cd backend
 source venv/bin/activate
@@ -243,16 +243,16 @@ python main.py
 
 # Terminal 2: Frontend
 npm run dev
-\`\`\`
+```
 
 ### Option 2: Concurrent with npm-run-all
-\`\`\`bash
+```bash
 npm install -g npm-run-all
 npm run dev:all
-\`\`\`
+```
 
 (Add this to frontend package.json)
-\`\`\`json
+```json
 {
   "scripts": {
     "dev": "next dev",
@@ -260,7 +260,7 @@ npm run dev:all
     "dev:all": "npm-run-all --parallel dev dev:backend"
   }
 }
-\`\`\`
+```
 
 ## Future Enhancements
 
